@@ -5,4 +5,3 @@ scikit-learn
 #  pip install torch torchvision torchaudio -f https://download.pytorch.org/whl/torch_stable.html  
 requests
 Pillow
-gunicorn == 20.0.4

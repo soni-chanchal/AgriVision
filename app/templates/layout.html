@@ -159,6 +159,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<a class="navbar-brand" href="{{ url_for('home') }}">
 				<img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 140px; height: 55px" alt="">
+				<span class="h1 fw-bold">Tech Vision In Agriculture</span>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
 				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,8 +173,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/">Crop</a>
-						<!-- <a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a> -->
+						<!-- <a class="nav-link" href="/">Crop</a> -->
+						<a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
 					</li>
 					<li class="nav-item">
 						<!-- <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a> -->
