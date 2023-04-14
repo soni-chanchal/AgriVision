@@ -13,63 +13,66 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from utils.model import ResNet9
+
 # ==============================================================================================
 
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
 
 # Loading plant disease classification model
 
-disease_classes = ['Apple___Apple_scab',
-                   'Apple___Black_rot',
-                   'Apple___Cedar_apple_rust',
-                   'Apple___healthy',
-                   'Blueberry___healthy',
-                   'Cherry_(including_sour)___Powdery_mildew',
-                   'Cherry_(including_sour)___healthy',
-                   'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot',
-                   'Corn_(maize)___Common_rust_',
-                   'Corn_(maize)___Northern_Leaf_Blight',
-                   'Corn_(maize)___healthy',
-                   'Grape___Black_rot',
-                   'Grape___Esca_(Black_Measles)',
-                   'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)',
-                   'Grape___healthy',
-                   'Orange___Haunglongbing_(Citrus_greening)',
-                   'Peach___Bacterial_spot',
-                   'Peach___healthy',
-                   'Pepper,_bell___Bacterial_spot',
-                   'Pepper,_bell___healthy',
-                   'Potato___Early_blight',
-                   'Potato___Late_blight',
-                   'Potato___healthy',
-                   'Raspberry___healthy',
-                   'Soybean___healthy',
-                   'Squash___Powdery_mildew',
-                   'Strawberry___Leaf_scorch',
-                   'Strawberry___healthy',
-                   'Tomato___Bacterial_spot',
-                   'Tomato___Early_blight',
-                   'Tomato___Late_blight',
-                   'Tomato___Leaf_Mold',
-                   'Tomato___Septoria_leaf_spot',
-                   'Tomato___Spider_mites Two-spotted_spider_mite',
-                   'Tomato___Target_Spot',
-                   'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
-                   'Tomato___Tomato_mosaic_virus',
-                   'Tomato___healthy']
+disease_classes = [
+    "Apple___Apple_scab",
+    "Apple___Black_rot",
+    "Apple___Cedar_apple_rust",
+    "Apple___healthy",
+    "Blueberry___healthy",
+    "Cherry_(including_sour)___Powdery_mildew",
+    "Cherry_(including_sour)___healthy",
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+    "Corn_(maize)___Common_rust_",
+    "Corn_(maize)___Northern_Leaf_Blight",
+    "Corn_(maize)___healthy",
+    "Grape___Black_rot",
+    "Grape___Esca_(Black_Measles)",
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+    "Grape___healthy",
+    "Orange___Haunglongbing_(Citrus_greening)",
+    "Peach___Bacterial_spot",
+    "Peach___healthy",
+    "Pepper,_bell___Bacterial_spot",
+    "Pepper,_bell___healthy",
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Potato___healthy",
+    "Raspberry___healthy",
+    "Soybean___healthy",
+    "Squash___Powdery_mildew",
+    "Strawberry___Leaf_scorch",
+    "Strawberry___healthy",
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___healthy",
+]
 
-disease_model_path = 'models/plant_disease_model.pth'
+disease_model_path = "models/plant_disease_model.pth"
 disease_model = ResNet9(3, len(disease_classes))
-disease_model.load_state_dict(torch.load(
-    disease_model_path, map_location=torch.device('cpu')))
+disease_model.load_state_dict(
+    torch.load(disease_model_path, map_location=torch.device("cpu"))
+)
 disease_model.eval()
 
 
 # Loading crop recommendation model
 
-crop_recommendation_model_path = 'models/RandomForest.pkl'
-crop_recommendation_model = pickle.load(
-    open(crop_recommendation_model_path, 'rb'))
+crop_recommendation_model_path = "models/RandomForest.pkl"
+crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, "rb"))
 
 
 # =========================================================================================
@@ -106,10 +109,12 @@ def predict_image(img, model=disease_model):
     :params: image
     :return: prediction (string)
     """
-    transform = transforms.Compose([
-        transforms.Resize(256),
-        transforms.ToTensor(),
-    ])
+    transform = transforms.Compose(
+        [
+            transforms.Resize(256),
+            transforms.ToTensor(),
+        ]
+    )
     image = Image.open(io.BytesIO(img))
     img_t = transform(image)
     img_u = torch.unsqueeze(img_t, 0)
@@ -122,6 +127,7 @@ def predict_image(img, model=disease_model):
     # Retrieve the class label
     return prediction
 
+
 # ===============================================================================================
 # ------------------------------------ FLASK APP -------------------------------------------------
 
@@ -131,31 +137,38 @@ app = Flask(__name__)
 # render home page
 
 
-@ app.route('/')
+@app.route("/")
 def home():
-    title = 'AgriVision - Home'
-    return render_template('index.html', title=title)
+    title = "AgriVision - Home"
+    return render_template("index.html", title=title)
+
 
 # render crop recommendation form page
 
 
-@ app.route('/crop-recommend')
+@app.route("/crop-recommend")
 def crop_recommend():
-    title = 'AgriVision - Crop Recommendation'
-    return render_template('crop.html', title=title)
+    title = "AgriVision - Crop Recommendation"
+    return render_template("crop.html", title=title)
+
+
+@app.route("/dashboard")
+def dashboard():
+    title = "AgriVision -Dashboard - Crop Production In India"
+    return render_template("dashboard.html", title=title)
+
 
 # render fertilizer recommendation form page
 
 
-@ app.route('/fertilizer')
+@app.route("/fertilizer")
 def fertilizer_recommendation():
-    title = 'AgriVision - Fertilizer Suggestion'
+    title = "AgriVision - Fertilizer Suggestion"
 
-    return render_template('fertilizer.html', title=title)
+    return render_template("fertilizer.html", title=title)
+
 
 # render disease prediction input page
-
-
 
 
 # ===============================================================================================
@@ -165,16 +178,16 @@ def fertilizer_recommendation():
 # render crop recommendation result page
 
 
-@ app.route('/crop-predict', methods=['POST'])
+@app.route("/crop-predict", methods=["POST"])
 def crop_prediction():
-    title = 'AgriVision - Crop Recommendation'
+    title = "AgriVision - Crop Recommendation"
 
-    if request.method == 'POST':
-        N = int(request.form['nitrogen'])
-        P = int(request.form['phosphorous'])
-        K = int(request.form['pottasium'])
-        ph = float(request.form['ph'])
-        rainfall = float(request.form['rainfall'])
+    if request.method == "POST":
+        N = int(request.form["nitrogen"])
+        P = int(request.form["phosphorous"])
+        K = int(request.form["pottasium"])
+        ph = float(request.form["ph"])
+        rainfall = float(request.form["rainfall"])
 
         # state = request.form.get("stt")
         city = request.form.get("city")
@@ -185,30 +198,32 @@ def crop_prediction():
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
 
-            return render_template('crop-result.html', prediction=final_prediction, title=title)
+            return render_template(
+                "crop-result.html", prediction=final_prediction, title=title
+            )
 
         else:
+            return render_template("try_again.html", title=title)
 
-            return render_template('try_again.html', title=title)
 
 # render fertilizer recommendation result page
 
 
-@ app.route('/fertilizer-predict', methods=['POST'])
+@app.route("/fertilizer-predict", methods=["POST"])
 def fert_recommend():
-    title = 'AgriVision - Fertilizer Suggestion'
+    title = "AgriVision - Fertilizer Suggestion"
 
-    crop_name = str(request.form['cropname'])
-    N = int(request.form['nitrogen'])
-    P = int(request.form['phosphorous'])
-    K = int(request.form['pottasium'])
+    crop_name = str(request.form["cropname"])
+    N = int(request.form["nitrogen"])
+    P = int(request.form["phosphorous"])
+    K = int(request.form["pottasium"])
     # ph = float(request.form['ph'])
 
-    df = pd.read_csv('Data/fertilizer.csv')
+    df = pd.read_csv("Data/fertilizer.csv")
 
-    nr = df[df['Crop'] == crop_name]['N'].iloc[0]
-    pr = df[df['Crop'] == crop_name]['P'].iloc[0]
-    kr = df[df['Crop'] == crop_name]['K'].iloc[0]
+    nr = df[df["Crop"] == crop_name]["N"].iloc[0]
+    pr = df[df["Crop"] == crop_name]["P"].iloc[0]
+    kr = df[df["Crop"] == crop_name]["K"].iloc[0]
 
     n = nr - N
     p = pr - P
@@ -217,49 +232,54 @@ def fert_recommend():
     max_value = temp[max(temp.keys())]
     if max_value == "N":
         if n < 0:
-            key = 'NHigh'
+            key = "NHigh"
         else:
             key = "Nlow"
     elif max_value == "P":
         if p < 0:
-            key = 'PHigh'
+            key = "PHigh"
         else:
             key = "Plow"
     else:
         if k < 0:
-            key = 'KHigh'
+            key = "KHigh"
         else:
             key = "Klow"
 
     response = Markup(str(fertilizer_dic[key]))
 
-    return render_template('fertilizer-result.html', recommendation=response, title=title)
+    return render_template(
+        "fertilizer-result.html", recommendation=response, title=title
+    )
+
 
 # render disease prediction result page
 
 
-@app.route('/disease-predict', methods=['GET', 'POST'])
+@app.route("/disease-predict", methods=["GET", "POST"])
 def disease_prediction():
-    title = 'AgriVision - Disease Detection'
+    title = "AgriVision - Disease Detection"
 
-    if request.method == 'POST':
-        if 'file' not in request.files:
+    if request.method == "POST":
+        if "file" not in request.files:
             return redirect(request.url)
-        file = request.files.get('file')
+        file = request.files.get("file")
         if not file:
-            return render_template('disease.html', title=title)
+            return render_template("disease.html", title=title)
         try:
             img = file.read()
 
             prediction = predict_image(img)
 
             prediction = Markup(str(disease_dic[prediction]))
-            return render_template('disease-result.html', prediction=prediction, title=title)
+            return render_template(
+                "disease-result.html", prediction=prediction, title=title
+            )
         except:
             pass
-    return render_template('disease.html', title=title)
+    return render_template("disease.html", title=title)
 
 
 # ===============================================================================================
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=False)
