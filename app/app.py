@@ -1,6 +1,6 @@
 # Importing essential libraries and modules
 
-from flask import Flask, render_template, request, Markup
+from flask import Flask, redirect, render_template, request, Markup
 import numpy as np
 import pandas as pd
 from utils.disease import disease_dic
@@ -247,6 +247,7 @@ def fert_recommend():
             key = "Klow"
 
     response = Markup(str(fertilizer_dic[key]))
+    print('response************* ' + response)
 
     return render_template(
         "fertilizer-result.html", recommendation=response, title=title
@@ -272,6 +273,7 @@ def disease_prediction():
             prediction = predict_image(img)
 
             prediction = Markup(str(disease_dic[prediction]))
+            print('prediction************* '+ prediction)
             return render_template(
                 "disease-result.html", prediction=prediction, title=title
             )

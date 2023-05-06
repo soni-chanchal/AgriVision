@@ -4,24 +4,24 @@
 <!-- banner -->
 <section class="banner_w3lspvt" id="home">
 	<div class="csslider infinity" id="slider1">
-	
-				<div class="banner-top">
-					<div class="overlay">
-						<div class="container">
-							<div class="w3layouts-banner-info text-center">
-								<h3 class="text-wh">AgriVision</h3>
-								<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
-								<br>
-								<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
-								<p class="text-li mx-auto mt-2">
-									1. What crop to plant here? <br>
-									2. What fertilizer to use? <br>
-									3. Which disease do your crop have?<br>
-									4. How to cure the disease?</p>
-							</div>
-						</div>
+
+		<div class="banner-top">
+			<div class="overlay">
+				<div class="container">
+					<div class="w3layouts-banner-info text-center">
+						<h3 class="text-wh">AgriVision</h3>
+						<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
+						<br>
+						<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+						<p class="text-li mx-auto mt-2">
+							1. What crop to plant here? <br>
+							2. What fertilizer to use? <br>
+							3. Which disease do your crop have?<br>
+							4. How to cure the disease?</p>
 					</div>
 				</div>
+			</div>
+		</div>
 	</div>
 </section>
 <!-- //banner -->
@@ -32,16 +32,12 @@
 		<h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
 		<div class="row core-grids">
 			<div class="col-lg-6 core-left p-3">
-				<img src="{{ url_for('static', filename='images/core.jpg') }}" style="height: 365px;" class="img-fluid" alt="" />
+				<img src="{{ url_for('static', filename='images/core.jpg') }}" style="height: 475px;" class="img-fluid"
+					alt="" />
+					<h3 class="mt-4">Integrating AI, Data Science and Analytics for improving Agriculture, Lives, and Cultivating Crops to increase farmers profit.</h3>
 			</div>
 			<div class="col-lg-6 core-right">
-				<h3 class="mt-4">Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase
-					Profit.</h3>
-				<p class="mt-3">We use state-of-the-art machine learning and deep learning technologies to help you
-					guide through
-					the entire farming process. Make informed decisions to understand the demographics of your area,
-					understand the
-					factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+				<p class="mt-3">The use of AI, ML, data science, and analytics in agriculture is rapidly expanding, and for good reason. These technologies can help farmers optimize their operations, improve crop yields, and reduce losses. By analyzing large amounts of data, these tools can generate insights that farmers can use to make data-driven decisions on inputs, irrigation, and harvesting times. This can lead to better crop quality, higher yields, and ultimately, increased profits for farmers. Additionally, AI and ML can help identify early warning signs of pests and diseases, allowing farmers to take preventative measures before a significant outbreak occurs. Analytics can also be used to analyze market trends and consumer preferences, enabling farmers to grow crops that are in high demand and fetch premium prices. With the integration of AI, ML, data science, and analytics, farmers can enhance their productivity, profitability, and sustainability, while improving the quality of their crops and the lives of their communities.</p>
 			</div>
 		</div>
 	</div>
@@ -53,6 +49,7 @@
 	<div class="container py-md-5">
 		<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
 		<div class="row blog-grids">
+
 			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
 				<img src="{{ url_for('static', filename='images/s3.jpg') }}" class="img-fluid" alt="" />
 				<a href="{{ url_for('crop_recommend') }}">
@@ -65,6 +62,7 @@
 					</div>
 				</a>
 			</div>
+
 			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
 				<img src="{{ url_for('static', filename='images/s2.jpg') }}" class="img-fluid" alt="" />
 				<!-- <a href="/"> -->
@@ -76,6 +74,7 @@
 					</div>
 				</a>
 			</div>
+
 			<div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
 
 				<img src="{{ url_for('static', filename='images/s4.jpg') }}" class="img-fluid" alt="">
@@ -89,8 +88,20 @@
 					</div>
 				</a>
 			</div>
+
+			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5" style="margin-top: 200px;">
+				<img src="{{ url_for('static', filename='images/insights.png') }}" class="img-fluid" alt="" />
+				<!-- <a href="/"> -->
+				<a href="{{ url_for('dashboard') }}">
+					<div class="blog-info">
+						<h4>Insights</h4>
+						<p class="mt-2">Get insights into a variety of crops produced in India.</p>
+					</div>
+				</a>
+			</div>
+
 		</div>
-	</div>
+		
 </section>
 <!-- //Products & Services -->
 
