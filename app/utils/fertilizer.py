@@ -5,7 +5,9 @@ fertilizer_dic = {
         <tbody>
             <tr>
                 <td>
-                    <h3>Please consider the following suggestions:</h3>
+                    <h3>
+                    <b>Please consider the following suggestions:</b>
+                    </h3>
                 </td>
             </tr>
             <tr>
@@ -51,7 +53,7 @@ fertilizer_dic = {
     <tbody>
         <tr>
             <td>
-                <h3>Please consider the following suggestions:</h3>
+                <h3><b>Please consider the following suggestions:</b></h3>
             </td>
         </tr>
         <tr>
@@ -113,7 +115,7 @@ fertilizer_dic = {
         <tbody>
             <tr>
                 <td>
-                    <h3>Please consider the following suggestions:</h3>
+                    <h3><b>Please consider the following suggestions:</b></h3>
                 </td>
             </tr>
             <tr>
@@ -157,7 +159,7 @@ fertilizer_dic = {
             <tbody>
                 <tr>
                     <td>
-                        <h3>Please consider the following suggestions:</h3>
+                        <h3><b>Please consider the following suggestions:</b></h3>
                     </td>
                 </tr>
                 <tr>
@@ -220,7 +222,7 @@ fertilizer_dic = {
         <table>
             <tbody>
                 <tr>
-                    <td><h3>Please consider the following suggestions:</h3></td>
+                    <td><h3><b>Please consider the following suggestions:</b></h3></td>
                 </tr>
                 <tr>
                     <td>
@@ -263,7 +265,7 @@ fertilizer_dic = {
         <table>
             <tbody>
                 <tr>
-                    <td><h3>Please consider the following suggestions:</h3></td>
+                    <td><h3><b>Please consider the following suggestions:</b></h3></td>
                 </tr>
                 <tr>
                     <td>

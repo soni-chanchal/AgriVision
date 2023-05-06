@@ -15,7 +15,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <ul>
     <li>
         Choose resistant varieties when possible.
@@ -48,7 +48,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease
+<br /><br /> 
 <br /><br /> <br />
 <ul>
     <li>
@@ -80,7 +80,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <ul>
     <li>
         Since the juniper galls are the source of the spores that infect the apple trees, cutting them is a sound
@@ -117,7 +117,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 
 <ul>
@@ -155,7 +155,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -194,7 +194,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -226,7 +226,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -263,7 +263,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -315,7 +315,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -356,7 +356,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -398,7 +398,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -436,7 +436,7 @@ disease_dic = {
 </ul>
 
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -473,7 +473,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -532,7 +532,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -582,7 +582,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -622,7 +622,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -656,7 +656,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -689,7 +689,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -727,7 +727,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -799,7 +799,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -837,7 +837,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -874,7 +874,7 @@ disease_dic = {
     </li>
 </ul>
 
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -905,7 +905,7 @@ disease_dic = {
 </ul>
 
 <br /> 2.
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -939,7 +939,7 @@ disease_dic = {
 </ul>
 
 <br /> 2.
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>
@@ -982,7 +982,7 @@ disease_dic = {
         products to plant material handled by workers after a cigarette
     </li>
 </ul>
-<br /><br /> How to prevent/cure the disease <br />
+<br /><br /> <h3><b>How to prevent/cure the disease?</b></h3> <br />
 <br />
 <ul>
     <li>

@@ -3,7 +3,7 @@
 
 <head>
 	<title>{{ title }}</title>
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
 
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,9 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
 	<style>
+		*{
+			font-family: 'Thasadith', sans-serif !important;
+		}
 		html {
 			font-size: 1rem;
 		}
@@ -95,7 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		}
 
-		table>tr{
+		td,th {
+			font-size: x-large;
+		}
+
+		ul>li {
 			font-size: x-large;
 		}
 	</style>
@@ -162,7 +169,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
 		<div class="container">
 			<a class="navbar-brand" href="{{ url_for('home') }}">
-				<img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 140px; height: 55px" alt="">
+				<img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 140px; height: 55px"
+					alt="">
 				<span class="h1 fw-bold">Tech Vision In Agriculture</span>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -223,7 +231,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<p class="homelogo">
 			<p>&copy; Copyright 2023 AgriVision</p>
-			
+
 		</div>
 	</footer>
 	<!-- //footer -->
